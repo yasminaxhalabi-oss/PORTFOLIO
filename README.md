@@ -26,6 +26,7 @@ Full control over inventory
 Real-time database updates
 Role-based access (User vs Admin)
 Clean and user-friendly interface
+github- https://github.com/Raven-sudo-apt/internal_project.git
 - 🔗 Project 2 – 🌍 IP Address Tracker
 React application for tracking IP addresses and visualizing their location.
 
@@ -40,6 +41,7 @@ This app detects the user’s IP and displays its location on an interactive map
 API integration (async data handling)
 Advanced state management
 Fully responsive design
+github - https://github.com/yasminaxhalabi-oss/ip-tracker-react.git
 - 🔗 Project 3 – 🌤️ Weather App
 Weather forecasting application using Open-Meteo API.
 
@@ -60,6 +62,7 @@ Precipitation
 Complex UI state updates
 Responsive design (mobile + desktop)
 Real-world API usage
+github- https://github.com/yasminaxhalabi-oss/Weather-app.git
 - 🔗 Project 4 – E-commerce platform for basketball shoes and sports gear.
 
 An online store focused on basketball products, delivering a modern shopping experience.
@@ -73,6 +76,7 @@ An online store focused on basketball products, delivering a modern shopping exp
 Clean e-commerce UI
 Focus on user experience
 Structured product presentation 
+github - https://github.com/yasminaxhalabi-oss/hoopix.git
 
 ## 📫 Contact
 - Email: yasminaxhalabi@gmail.com
