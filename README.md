@@ -1,5 +1,5 @@
 # PORTFOLIO
-# 👋 Hi, I'm [Yasmina halabi]
+# 👋 Hi, I'm Yasmina halabi
 
 💻 Developer | 🚀 Passionate about coding
 
