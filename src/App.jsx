@@ -30,8 +30,8 @@ const projects = [
 ];
 
 const testimonials = [
-  { id: 1, name: "מרצה מהטכניון", role: "Full-Stack Instructor", text: "סטודנטית בעלת יכולת למידה עצמית גבוהה מאוד הפרויקטים שלה מציגים הבנה מעמיקה של קצה לקצה" },
-  { id: 2, name: "חבר לצוות פיתוח", role: "Frontend Developer", text: "תענוג לעבוד עם יסמינה. היא תמיד מוצאת פתרונות יצירתיים לבעיות מורכבות ושומרת על קוד נקי" }
+  { id: 1, name: "מרצה מהטכניון", role: "Full-Stack Instructor", text: "סטודנטית בעלת יכולת למידה עצמית גבוהה מאוד. הפרויקטים שלה מציגים הבנה מעמיקה של קצה לקצה." },
+  { id: 2, name: "חבר לצוות פיתוח", role: "Frontend Developer", text: "תענוג לעבוד עם יסמינה. היא תמיד מוצאת פתרונות יצירתיים לבעיות מורכבות ושומרת על קוד נקי." }
 ];
 
 const timeline = [
@@ -237,10 +237,18 @@ export default function App() {
                 I discovered my passion for programming during my National Service. I completed a comprehensive Full-Stack course at the Technion, where I fell in love with building things that solve real-world problems.
               </p>
               <p style={{ fontSize:18, color:colors.text, lineHeight:1.8, marginBottom:30 }}>
-                I’ve built end-to-end projects with a focus on creating smooth user experiences backed by robust architecture. Beyond coding, I’m a basketball player in a women's league, a gym-goer, and a proud dog owner. 
+                I’ve built end-to-end projects with a focus on creating smooth user experiences backed by robust architecture.
               </p>
-              <div style={{ display: "flex", gap: 20 }}><span style={{ fontSize: 32 }}>🏀</span><span style={{ fontSize: 32 }}>🐕</span><span style={{ fontSize: 32 }}>🏋️‍♀️</span></div>
+              
+              {/* המרכוז של האייקונים */}
+              <div style={{ display: "flex", justifyContent: "center", gap: 40, padding: "20px 0", borderTop: `1px solid ${colors.border}`, marginTop: 10 }}>
+                <span style={{ fontSize: 45, filter: "grayscale(0.2)" }}>🏀</span>
+                <span style={{ fontSize: 45, filter: "grayscale(0.2)" }}>🐕</span>
+                <span style={{ fontSize: 45, filter: "grayscale(0.2)" }}>🏋️‍♀️</span>
+                <span style={{ fontSize: 45, filter: "grayscale(0.2)" }}>💻</span>
+              </div>
             </div>
+            
             <div style={{ background:colors.card, borderRadius:24, padding:32, border:`1px solid ${colors.border}` }}>
               {[["Training", "Technion Full-Stack"], ["Location", "Israel"], ["Portfolio", "4 Projects"], ["Seeking", "Junior Full-Stack Role"]].map(([k, v]) => (
                 <div key={k} style={{ display:"flex", justifyContent:"space-between", paddingBottom:15, marginBottom:15, borderBottom:`1px solid ${colors.border}` }}>
