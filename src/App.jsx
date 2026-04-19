@@ -152,7 +152,7 @@ export default function App() {
           </p>
           <div style={{ display:"flex", gap:15, flexWrap: "wrap" }}>
             <a href="#projects" style={{ padding:"14px 28px", borderRadius:100, background:colors.accent, color:"#fff", textDecoration:"none", fontSize:14, fontWeight:500 }}>View Projects</a>
-            <a href="/Yasmina_Halabi_CV.pdf" download style={{ padding:"14px 28px", borderRadius:100, border:`1.5px solid ${colors.accent}`, color:colors.accent, textDecoration:"none", fontSize:14, fontWeight:500 }}>Download CV</a>
+            <a href="/cv.pdf" download="Yasmina_Halabi_CV.pdf" style={{ padding:"14px 28px", borderRadius:100, border:`1.5px solid ${colors.accent}`, color:colors.accent, textDecoration:"none", fontSize:14, fontWeight:500 }}>Download CV</a>
           </div>
         </section>
 
