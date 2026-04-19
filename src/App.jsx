@@ -136,7 +136,7 @@ export default function App() {
       </nav>
 
       <div style={{ maxWidth:1000, margin:"0 auto", padding:"0 32px" }}>
-        {/* Home */}
+        {/* Home Section */}
         <section id="home" style={{ paddingTop:80, paddingBottom:100 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 30, marginBottom: 40, flexWrap: "wrap" }}>
             <div style={{ width: 130, height: 130, borderRadius: "50%", border: `5px solid ${darkMode ? colors.border : 'white'}`, overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.1)" }}>
@@ -152,11 +152,12 @@ export default function App() {
           </p>
           <div style={{ display:"flex", gap:15, flexWrap: "wrap" }}>
             <a href="#projects" style={{ padding:"14px 28px", borderRadius:100, background:colors.accent, color:"#fff", textDecoration:"none", fontSize:14, fontWeight:500 }}>View Projects</a>
+            {/* CV Download Link Updated */}
             <a href="/cv.pdf" download="Yasmina_Halabi_CV.pdf" style={{ padding:"14px 28px", borderRadius:100, border:`1.5px solid ${colors.accent}`, color:colors.accent, textDecoration:"none", fontSize:14, fontWeight:500 }}>Download CV</a>
           </div>
         </section>
 
-        {/* Projects */}
+        {/* Projects Section */}
         <section id="projects" {...anim("projects")} style={{ paddingBottom:100 }}>
           <h2 style={{ fontFamily:"'Instrument Serif'", fontSize:38, color:colors.text, marginBottom:40 }}>Featured Projects</h2>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fill, minmax(280px, 1fr))", gap:20 }}>
@@ -180,7 +181,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Skills */}
+        {/* Skills Section */}
         <section id="skills" {...anim("skills")} style={{ paddingBottom: 100 }}>
           <h2 style={{ fontFamily: "'Instrument Serif'", fontSize: 38, color: colors.text, marginBottom: 40 }}>Skills & Stack</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: 30 }}>
@@ -200,7 +201,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Testimonials */}
+        {/* Testimonials Section */}
         <section id="testimonials" {...anim("testimonials")} style={{ paddingBottom: 100 }}>
           <h2 style={{ fontFamily: "'Instrument Serif'", fontSize: 38, color: colors.text, marginBottom: 40 }}>Testimonials</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 20 }}>
@@ -221,7 +222,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Experience */}
+        {/* Experience Section */}
         <section id="experience" {...anim("experience")} style={{ paddingBottom: 100 }}>
           <h2 style={{ fontFamily: "'Instrument Serif'", fontSize: 38, color:colors.text, marginBottom: 40 }}>Experience</h2>
           {timeline.map((item, i) => (
@@ -234,7 +235,7 @@ export default function App() {
           ))}
         </section>
 
-        {/* About Me */}
+        {/* About Section */}
         <section id="about" {...anim("about")} style={{ paddingBottom:100 }}>
           <h2 style={{ fontFamily:"'Instrument Serif'", fontSize:38, color:colors.text, marginBottom:40 }}>About Me</h2>
           <div style={{ display:"grid", gridTemplateColumns:"repeat(auto-fit, minmax(300px, 1fr))", gap:50 }}>
@@ -269,7 +270,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact */}
+        {/* Contact Section */}
         <section id="contact" {...anim("contact")} style={{ paddingBottom: 120, textAlign: "center" }}>
           <h2 style={{ fontFamily: "'Instrument Serif'", fontSize: 38, color:colors.text, marginBottom: 40 }}>Let's Connect</h2>
           <div style={{ display: "flex", justifyContent: "center", gap: 20, flexWrap: "wrap" }}>
