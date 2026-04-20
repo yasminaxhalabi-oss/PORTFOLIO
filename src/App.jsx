@@ -23,10 +23,10 @@ const skillsWithLogos = {
 };
 
 const projects = [
-  { id: 1, emoji: "🛒", title: "Electronics Store", sub: "Full-stack rental platform", desc: "Real-time rental platform for electronics. Features include live inventory management and dynamic product catalog.", stack: ["React", "Node.js"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
-  { id: 2, emoji: "🌍", title: "IP Tracker", sub: "Live Geolocation Mapping", desc: "Interactive map visualization using LeafletJS. Tracks IP addresses or domains with real-time API integration.", stack: ["React", "LeafletJS", "API"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
-  { id: 3, emoji: "🌤️", title: "Weather App", sub: "7-day & Hourly Forecast", desc: "Comprehensive weather dashboard featuring real-time conditions.", stack: ["React", "Open-Meteo", "CSS"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
-  { id: 4, emoji: "🏀", title: "Hoopix", sub: "Basketball Gear E-commerce", desc: "A clean online store for sports gear. Includes advanced filtering and a seamless shopping cart.", stack: ["React", "JavaScript", "CSS"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
+  { id: 1, emoji: "🛒", image: "/electronics.jpg", title: "Electronics Store", sub: "Full-stack rental platform", desc: "Real-time rental platform for electronics. Features include live inventory management and dynamic product catalog.", stack: ["React", "Node.js"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
+  { id: 2, emoji: "🌍", image: "/ip-tracker.jpg", title: "IP Tracker", sub: "Live Geolocation Mapping", desc: "Interactive map visualization using LeafletJS. Tracks IP addresses or domains with real-time API integration.", stack: ["React", "LeafletJS", "API"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
+  { id: 3, emoji: "🌤️", image: "/weather-app.jpg", title: "Weather App", sub: "7-day & Hourly Forecast", desc: "Comprehensive weather dashboard featuring real-time conditions.", stack: ["React", "Open-Meteo", "CSS"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
+  { id: 4, emoji: "🏀", image: "/hoopix.jpg", title: "Hoopix", sub: "Basketball Gear E-commerce", desc: "A clean online store for sports gear. Includes advanced filtering and a seamless shopping cart.", stack: ["React", "JavaScript", "CSS"], github: "https://github.com/yasminaxhalabi-oss", demo: "https://portfolio-git-master-yasminaxhalabi-oss-projects.vercel.app/" },
 ];
 
 const timeline = [
@@ -111,6 +111,7 @@ export default function App() {
         .chip img { width: 18px; height: 18px; object-fit: contain; }
         .proj-card { border: 1.5px solid ${colors.border}; border-radius: 20px; padding: 28px; background: ${colors.card}; cursor: pointer; transition: 0.3s; color: ${colors.text}; }
         .proj-card:hover { border-color: ${colors.accent}; transform: translateY(-4px); }
+        .inner-proj-img { width: 100%; border-radius: 12px; margin-bottom: 16px; border: 1px solid ${colors.border}; }
         .tl-item { position: relative; padding-left: 30px; border-left: 2px solid ${colors.border}; padding-bottom: 40px; }
         .tl-item::before { content: ""; position: absolute; left: -7px; top: 0; width: 12px; height: 12px; border-radius: 50%; background: ${colors.accent}; border: 3px solid ${colors.bg}; }
         .toast { position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: ${colors.accent}; color: white; padding: 12px 24px; border-radius: 100px; font-size: 14px; z-index: 1000; box-shadow: 0 10px 25px rgba(124,58,237,0.3); animation: popUp 0.3s ease; }
@@ -152,7 +153,6 @@ export default function App() {
           </p>
           <div style={{ display:"flex", gap:15, flexWrap: "wrap" }}>
             <a href="#projects" style={{ padding:"14px 28px", borderRadius:100, background:colors.accent, color:"#fff", textDecoration:"none", fontSize:14, fontWeight:500 }}>View Projects</a>
-            {/* נתיב יחסי מעודכן */}
             <a href="./cv.pdf" download="Yasmina_Halabi_CV.pdf" style={{ padding:"14px 28px", borderRadius:100, border:`1.5px solid ${colors.accent}`, color:colors.accent, textDecoration:"none", fontSize:14, fontWeight:500 }}>Download CV</a>
           </div>
         </section>
@@ -166,8 +166,10 @@ export default function App() {
                 <div style={{ fontSize:35, marginBottom:15 }}>{p.emoji}</div>
                 <h3 style={{ fontSize:22, marginBottom:5, color:colors.text }}>{p.title}</h3>
                 <p style={{ fontSize:14, color:colors.subText, marginBottom:15 }}>{p.sub}</p>
+                
                 {open === p.id && (
-                  <div style={{ borderTop:`1px solid ${colors.border}`, paddingTop:12 }}>
+                  <div style={{ borderTop:`1px solid ${colors.border}`, paddingTop:20, marginTop:10 }}>
+                    <img src={p.image} alt={p.title} className="inner-proj-img" />
                     <p style={{ fontSize:14, color:colors.subText, lineHeight:1.6, marginBottom:15 }}>{p.desc}</p>
                     <div style={{ display: "flex", gap: 20, marginBottom: 15 }}>
                       <a href={p.github} target="_blank" rel="noreferrer" style={{ color: colors.accent, fontSize: 12, fontWeight: 600, textDecoration: "none" }}>GitHub ↗</a>
@@ -175,6 +177,7 @@ export default function App() {
                     </div>
                   </div>
                 )}
+                
                 <div style={{ display:"flex", flexWrap:"wrap", gap:8 }}>{p.stack.map(s => <span key={s} style={{ fontSize:10, background:darkMode ? "#2e1065" : "#f5f3ff", color:colors.accent, padding:"4px 10px", borderRadius:100 }}>{s}</span>)}</div>
               </div>
             ))}
